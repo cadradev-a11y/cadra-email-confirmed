@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f5f5f4" />
+<title>Email confirmed — Cadra</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f4;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 100vh;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 56px 48px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+  .wordmark {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #525252;
+    margin-bottom: 40px;
+  }
+  .check-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #C7F548;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .check-wrap svg {
+    width: 36px;
+    height: 36px;
+    stroke: #0a0a0a;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .check-wrap svg path {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: draw 0.4s ease-out 0.25s forwards;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: #525252;
+    margin-bottom: 32px;
+  }
+  .btn {
+    display: inline-block;
+    background: #C7F548;
+    color: #0a0a0a;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:hover { background: #B8E63D; }
+  .btn:active { transform: scale(0.97); }
+  .hint {
+    font-size: 13px;
+    color: #a3a3a3;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  .footer {
+    margin-top: 32px;
+    font-size: 12px;
+    color: #a3a3a3;
+  }
+  @keyframes pop {
+    0%   { transform: scale(0); opacity: 0; }
+    60%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+  @media (max-width: 480px) {
+    .card { padding: 44px 28px; }
+    h1 { font-size: 24px; }
+    p { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="wordmark">CADRA</div>
+
+    <div class="check-wrap" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 12.5 L10 18 L20 6" />
+      </svg>
+    </div>
+
+    <h1>Email confirmed</h1>
+    <p>Your Cadra account is ready. Open the app to meet your AI coach and start your first ride.</p>
+
+    <a href="cadra://" class="btn" id="open-app">Open Cadra</a>
+
+    <p class="hint">If the button doesn't work, open Cadra from your home screen.</p>
+  </div>
+
+  <div class="footer">Ride strong — The Cadra Team</div>
+
+<script>
+  setTimeout(function() {
+    window.location.href = 'cadra://';
+  }, 800);
+</script>
+
+</body>
+</html>
