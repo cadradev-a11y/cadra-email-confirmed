@@ -87,6 +87,7 @@
     text-decoration: none;
     transition: transform 0.15s ease, background 0.15s ease;
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
   }
   .btn:hover { background: #B8E63D; }
   .btn:active { transform: scale(0.97); }
@@ -128,20 +129,14 @@
     </div>
 
     <h1>Email confirmed</h1>
-    <p>Your Cadra account is ready. Open the app to meet your AI coach and start your first ride.</p>
+    <p>Your Cadra account is ready. Tap below to open the app and meet your AI coach.</p>
 
-    <a href="cadra://" class="btn" id="open-app">Open Cadra</a>
+    <a href="rork-app://" class="btn">Open Cadra</a>
 
-    <p class="hint">If the button doesn't work, open Cadra from your home screen.</p>
+    <p class="hint">If the button doesn't open the app, open Cadra from your home screen.</p>
   </div>
 
   <div class="footer">Ride strong — The Cadra Team</div>
-
-<script>
-  setTimeout(function() {
-    window.location.href = 'cadra://';
-  }, 800);
-</script>
 
 </body>
 </html>
